@@ -87,8 +87,8 @@ cliff.delta.default <- function( d, f, conf.level=.95,
 
   if(conf.level>.9999 | conf.level<.5) stop("conf.level must be within 50% and 99.99%")
   
-  n1 = length(treatment)
-  n2 = length(control)
+  n1 = as.double(length(treatment))
+  n2 = as.double(length(control))
   
   rescale.factor = (n1*n2-1)/(n1*n2);
 
